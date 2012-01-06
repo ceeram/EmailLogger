@@ -5,9 +5,9 @@ Optional configuration for log levels to send emails, by default to all core log
 
 h2. Background
 
-This plugin was developed when playing with a shared @phpfog CakePHP istallation.
+This plugin was developed when playing with a shared @phpfog CakePHP installation.
 No shell and/or file access there. This plugin is just a quick and dirty way check
-your app wihtout turning debug on, or check errors that only occur with debug off.
+your app without turning debug on, or check errors that only occur with debug off.
 
 h2. Requirements
 
@@ -41,7 +41,7 @@ h2. Usage
 In app/Config/bootstrap.php add: CakePlugin::load('EmailLogger', array('bootstrap' => true));
 Add $email_logger configuration in app/Config/email.php or create EmailLogger/Config/config.php
 
-h2 Configuration(optional):
+h2. Configuration(optional):
 
 EmailLogger/Config/config.php
 Define which levels and/or email configuration to use for EmailLogger.
