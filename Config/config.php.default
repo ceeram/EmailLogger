@@ -10,7 +10,6 @@
  * - 'error'
  *
  */
-
 $config['EmailLogger']['levels'] = array(); //leave empty for all core and user levels
 
 /*
@@ -32,7 +31,11 @@ $config['EmailLogger']['levels'] = array(); //leave empty for all core and user 
  *	);
  *
  */
-
 $config['EmailLogger']['email'] = 'email_logger';// uses $email_logger config in app/Config/email.php
+
+/*
+ * Set to true to receive emails for every CakeLog::write(), defaults to false to avoid duplicate emails
+ */
+$config['EmailLogger']['duplicates'] = false; //avoid emails to be sent for duplicate log messages
 
 return $config;

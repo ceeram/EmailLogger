@@ -44,8 +44,9 @@ Add $email_logger configuration in app/Config/email.php or create EmailLogger/Co
 h2. Configuration(optional):
 
 EmailLogger/Config/config.php
-Define which levels and/or email configuration to use for EmailLogger.
-Without configuration file, EmailLogger will send out emails for all core log levels
+Define which levels and email configuration to use for EmailLogger.
+Set 'duplicates' to false/true to avoid receiving duplicate emails.
+Without this file, EmailLogger will send out emails for all core log levels and no duplicates.
 
 Note: Don't setup your email configuration for EmailLogger with 'log' => true
 or any log level which will be handled by EmailLogger
