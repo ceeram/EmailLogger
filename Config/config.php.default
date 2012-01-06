@@ -1,0 +1,38 @@
+<?php
+/*
+ * Example: $config['EmailLogger']['levels'] = array('error', 'warning', 'custom_level');
+ *
+ * CakePHP core log levels:
+ * - 'warning'
+ * - 'notice'
+ * - 'debug'
+ * - 'info'
+ * - 'error'
+ *
+ */
+
+$config['EmailLogger']['levels'] = array(); //leave empty for all core and user levels
+
+/*
+ * Set the email configuration name defined in app/Config/email.php or
+ * configuration array. For all configuration options check CakeEmail documentation
+ *
+ * Example:
+ *
+ *	$config['EmailLogger']['email'] = 'logger';
+ *
+ *	or:
+ *
+ *	$config['EmailLogger']['email'] = array(
+ *		'to' => 'admin@example.com',//required
+ *		'transport' => 'Smtp',
+ *		'host' => 'localhost',
+ *		'from' => 'emaillogger@example.com',
+ *		'emailFormat' => 'text',
+ *	);
+ *
+ */
+
+$config['EmailLogger']['email'] = 'email_logger';// uses $email_logger config in app/Config/email.php
+
+return $config;

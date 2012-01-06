@@ -1,0 +1,17 @@
+EmailLogger plugin
+
+Send out emails for log entries.
+Optional configuration for log levels to send emails, defaults to core log levels only.
+
+Setup:
+1.  Install to one of your plugin directories
+2.  In app/Config/bootstrap.php add: CakePlugin::load('EmailLogger', array('bootstrap' => true));
+3.  Add $email_logger configuration in app/Config/email.php or create EmailLogger/Config/config.php
+
+Configuration(optional):
+EmailLogger/Config/config.php
+Define which levels and/or email configuration to use for EmailLogger.
+Without configuration file, EmailLogger will only send out emails for core log levels
+
+Note: Don't setup your email configuration for EmailLogger with 'log' => true
+or any log level which will be handled by EmailLogger
