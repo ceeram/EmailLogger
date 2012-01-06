@@ -53,7 +53,7 @@ or any log level which will be handled by EmailLogger
 h2. Important
 
 It's not recommended to use this in production.
-http://ad7six.com/2007/04/19/Don-t-mail-me-my-site-errors.html
+"http://ad7six.com/2007/04/19/Don-t-mail-me-my-site-errors.html":http://ad7six.com/2007/04/19/Don-t-mail-me-my-site-errors.html
 
 _Hint:_
 Set 'levels' => array('logger') and it wont ever send out emails for core errors,
