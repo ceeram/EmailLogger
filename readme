@@ -21,3 +21,5 @@ IMPORTANT:
 http://ad7six.com/2007/04/19/Don-t-mail-me-my-site-errors.html
 It's not recommended to use this in production. This plugin was developed when playing with a shared @phpfog CakePHP istallation. No shell and file access.
 This plugin is just a quick and dirty way check your app wihtout turning debug on, or check errors that only occur with debug off.
+Hint: set 'levels' => array('logger') and it wont ever send out emails for core errors, and add CakeLog::write('logger', 'testing'); or $this->log('testing', 'log');
+to the code you want to debug.
