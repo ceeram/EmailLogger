@@ -8,11 +8,11 @@ class EmailLogger implements CakeLogInterface {
 		'email' => 'email_logger'
 	);
 
-    function __construct($config = array()) {
+    public function __construct($config = array()) {
 		$this->config = array_merge($this->config, $config);
     }
 
-    function write($type, $message) {
+    public function write($type, $message) {
 		if (empty($this->config['levels']) || in_array($type, $this->config['levels'])) {
 			try {
 				CakeEmail::deliver(null, 'EmailLogger: ' . $type, $message, $this->config['email']);
