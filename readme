@@ -26,5 +26,5 @@ or check errors that only occur with debug off.
 
 Hint:
 Set 'levels' => array('logger') and it wont ever send out emails for core errors,
-and add CakeLog::write('logger', 'testing'); or $this->log('testing', 'log');
+and add CakeLog::write('logger', 'Log this'); or $this->log('Log this', 'logger');
 to the code you want to debug.
