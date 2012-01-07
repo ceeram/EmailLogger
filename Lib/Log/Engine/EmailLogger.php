@@ -6,26 +6,27 @@ class EmailLogger implements CakeLogInterface {
 	public $config = array(
 		'levels' => array('warning', 'notice', 'debug', 'info', 'error'),
 		'email' => 'email_logger',
-		'duplicates' => false
+		'duplicates' => true,
+		'file' => 'email_logger.log'
 	);
 
     public function __construct($config = array()) {
-		$this->config = array_merge($this->config, array('file' => LOGS . 'email_logger.log'), $config);
+		$this->config = array_merge($this->config, $config);
+		$this->config['file'] = LOGS . $this->config['file'];
     }
 
     public function write($type, $message) {
-		if (empty($this->config['levels']) || in_array($type, $this->config['levels'])) {
-			if (!strpos(file_get_contents($this->config['file']), $message)) {
+		extract($this->config);
+		if (empty($levels) || in_array($type, $levels)) {
+			if ($duplicates || (!$duplicates && strpos(file_get_contents($file), $message) === false)) {
 				try {
-					CakeEmail::deliver(null, 'EmailLogger: ' . $type, $message, $this->config['email']);
+					CakeEmail::deliver(null, 'EmailLogger: ' . $type, $message, $email);
+					if (!$duplicates) {
+						$output = $message . "\n";
+						file_put_contents($file, $output, FILE_APPEND);
+					}
 				} catch(Exception $e) {}
 			}
-
-			$output = $message . "\n";
-			file_put_contents($this->config['file'], $output, FILE_APPEND);
-
-		} elseif ($type == 'clean') {
-			file_put_contents($this->config['file'], "");
 		}
     }
 }
