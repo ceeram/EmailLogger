@@ -1,7 +1,7 @@
 <?php
 App::uses('CakeLogInterface', 'Log');
 App::uses('CakeEmail', 'Network/Email');
-class EmailLogger implements CakeLogInterface {
+class EmailLog implements CakeLogInterface {
 
 	public $config = array(
 		'levels' => array('warning', 'notice', 'debug', 'info', 'error'),
