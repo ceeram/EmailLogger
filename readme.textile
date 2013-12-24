@@ -1,6 +1,6 @@
 h1. EmailLogger plugin
 
-Email engine for CakeLog, CakePHP 2.x Sends out emails for log entries.
+Email engine for CakeLog, CakePHP >= 2.4.x Sends out emails for log entries.
 Optional configuration for log levels to send emails, by default to all core log levels.
 
 h2. Background
@@ -12,7 +12,7 @@ your app without turning debug on, or check errors that only occur with debug of
 h2. Requirements
 
 * PHP 5.3
-* CakePHP 2.x
+* CakePHP 2.4.x
 
 h2. Installation
 
