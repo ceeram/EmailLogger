@@ -12,7 +12,7 @@ your app without turning debug on, or check errors that only occur with debug of
 h2. Requirements
 
 * PHP 5.3
-* CakePHP 2.4.x
+* CakePHP 2.4.x (CakePHP pre-2.4 checkout commit @eef768d7273dc9ffb50f6cc371e79d5de9e5e20c)
 
 h2. Installation
 
